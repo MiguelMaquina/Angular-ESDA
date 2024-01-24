@@ -1,0 +1,13 @@
+
+<div *ngFor="let personaje of personajes">
+    {{personaje.nombre|uppercase}}
+    <button (click)="onSelect(personaje)">Seleccionar</button>
+</div>
+
+<div *ngIf="personajeSel">
+    <div>
+        <label>Nombre:
+            <input type="text" [(ngModel)]="personajeSel.nombre">
+        </label>
+    </div>
+</div>
